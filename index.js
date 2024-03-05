@@ -1,18 +1,15 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
+function hasTargetSum(nums, target) {
+  // iterate through array 
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) { // sum two number and compare to target number
+        return true;
+      }
+    }
+  }
+  
+  return false;
 }
-
-/* 
-  Write the Big O time complexity of your function here
-*/
-
-/* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
-*/
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
